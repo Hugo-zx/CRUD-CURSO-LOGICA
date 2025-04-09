@@ -1,12 +1,12 @@
 import express from "express"
-import userroutes from "./routes/alunos.js"
+import userRoutes from "./routes/alunos.js"
 import cors from "cors"
 
-const app=express()
+const app = express()
 
-app.use(express.json())
-app.use(cors())
+app.use(express.json()) /* Importando o JSON para que seja possível manipular os dados em blocos de texto */
+app.use(cors()) /* Importando o CORS para que evite conflitos ao rodar o projeto localmente */
 
-app.use ("/",userroutes)
+app.use("/", userRoutes)
 
-app.listen(8800)
+app.listen(8800) /* Porta que o Servidor Node estará funcionando */
